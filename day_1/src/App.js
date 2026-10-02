@@ -30,24 +30,55 @@ import "./App.css";
 //     </div>
 //   );
 // }
-const Search = () => <input placeholder="Search.." />;
+// const Search = () => <input placeholder="Search.." />;
 
-const Header = () => {
-  return (
-    <div className="header">
-      <h1>Amazon App</h1>
-      <Search />
-      <ul className="list-box">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-  );
-};
+// const Header = () => {
+//   return (
+//     <div className="header">
+//       <h1>Amazon App</h1>
+//       <Search />
+//       <ul className="list-box">
+//         <li>Home</li>
+//         <li>About</li>
+//         <li>Contact</li>
+//       </ul>
+//     </div>
+//   );
+// };
+
+// function App() {
+//   return <Header />;
+// }
+
+// export default App;
+
+// *****************************************//
+// Rendering List and Conditional Rendering //
+// *****************************************//
+
+const isAdmin = true;
+
+const isLoading = false;
+
+function Loader() {
+  return <h3>Loading...</h3>;
+}
 
 function App() {
-  return <Header />;
+  return (
+    <div className="App">
+      <h1 style={{ backgroundColor: "orange", color: "white" }}>
+        Hello and Welcome
+      </h1>
+      {isAdmin ? (
+        <h2>This is the Admin Portal</h2>
+      ) : (
+        <h2>This is the User Portal</h2>
+      )}
+
+      {isLoading ? <h3>Page Loaded</h3> : <Loader />}
+    </div>
+  );
 }
 
 export default App;
