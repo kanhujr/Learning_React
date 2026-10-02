@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: gold;
+}
+
+.list-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  /* background-color: grey; */
+}
